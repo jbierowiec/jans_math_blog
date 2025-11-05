@@ -1,14 +1,14 @@
-# janekbikes
+# Jan's Math Blog
 
-<!-- ## Welcome to my math puzzle blog! --> 
+<!-- ## Welcome to my math blog! --> 
 
- ## Welcome to my cycling blog!
+ ## Welcome to my math blog!
 
-This blog is about my travels on my bike in and outside of NYC that give a feeling of leaving the stresses of city life for a day, two, or more. The blog will be a collection of adventures, experiences, and a way for me to express my passion for cycling aside from using Strava and Instagram. More of my goals with the blog are explained in my first blog post. If you would like to check out the blog, click the link down below:
+This blog is a collection of my puzzle solutions, interesting mathematical phenomena that I have discovered as well as things that have caught my eye related to math. This blog is in a way an extension of myself, my interest in mathematics, and a way for me to share my findings with others. If you would like to check out the blog, click the link down below:
 
 <!-- This blog posts mathematical puzzles, along with their solutions once every two weeks. The purpose of this blog is to further not only my personal mathematical, logical, and analytical mind, but to share this experience with others, so that more people can become thinkers. -->
 
-[janekbikes](https://janekbikes.netlify.app)
+[Jan's Math Blog](https://janekbikes.netlify.app)
 
 This website uses HTML, CSS, Nunjucks, eleventy.js, and Netlify's Content Management System (CMS) which was also used as the Static Site Generator for the website. The `src` folder contains all the files that are the bulk of the site. The folder contains:
 
