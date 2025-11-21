@@ -59,84 +59,207 @@ corner, move one cell directly down instead.
 
 Below is a correctly constructed 3×3 magic square using the Siamese method:
 
-|   |   |   |
-| - | - | - |
-|   | 1 |   |
-|   |   |   |
-|   |   |   |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+</table>
 
 Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 |   |
-|   |   |   |
-|   |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 Up and to the right would go out of bounds, so we loop around, and number 3 is at the first column, second row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 |   |
-| 3 |   |   |
-|   |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 
 Now, when trying to go up to the right, number 1 is encountered, so we go down one from 3, and write number 4 in the first column, third row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 |   |
-| 3 |   |   |
-| 4 |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 Up and to the right would yield number 5 in the second column, second row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 |   |
-| 3 | 5 |   |
-| 4 |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 Up and to the right would yield number 6 in the third column, first row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 | 6 |
-| 3 | 5 |   |
-| 4 |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;">6</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 Now, when trying to go up to the right, number 4 is encountered, so we go down one from 6, and write number 7 in the third column, second row.
 
-|   |   |   |
-| - | - | - |
-|   | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;">6</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;">7</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
+
 
 Up and to the right would go out of bounds, so we loop around, and number 8 is at the first column, first row.
 
-|   |   |   |
-| - | - | - |
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 |   | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">8</td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;">6</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;">7</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;"></td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
+
 
 Up and to the right would go out of bounds, so we loop around, and number 9 is at the second column, third row.
 
-|   |   |   |
-| - | - | - |
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 | 9 | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">8</td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;">6</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;">7</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;">9</td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
 
 The final result is the following.
 
-|   |   |   |
-| - | - | - |
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 | 9 | 2 |
+<table style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">8</td>
+    <td style="border: 2px solid black; padding: 8px;">1</td>
+    <td style="border: 2px solid black; padding: 8px;">6</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">3</td>
+    <td style="border: 2px solid black; padding: 8px;">5</td>
+    <td style="border: 2px solid black; padding: 8px;">7</td>
+  </tr>
+  <tr>
+    <td style="border: 2px solid black; padding: 8px;">4</td>
+    <td style="border: 2px solid black; padding: 8px;">9</td>
+    <td style="border: 2px solid black; padding: 8px;">2</td>
+  </tr>
+</table>
+
 
 ## Validating the Magic Square
 
