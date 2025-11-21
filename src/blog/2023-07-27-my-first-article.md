@@ -9,7 +9,7 @@ tags:
   - post
   - featured
 image: /assets/blog/3x3_magic_square.png
-imageAlt: An image of NYC's Central Park
+imageAlt: An image of a 3×3 Magic Square
 status: published
 ---
 
