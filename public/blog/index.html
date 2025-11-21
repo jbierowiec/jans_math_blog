@@ -5,21 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
 
-    
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored || (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
-      })();
-    </script>
-
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -53,30 +38,6 @@
       <h1 class="section-title">Recent articles</h1>
 
       <ul role="list" class="articles__list flow"><li>
-      <article class="snippet">
-        <img src="/assets/blog/nyc_century_route.jpeg" alt="Test image" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2025-04-11-test-2/">Test 2</a></h3>
-        <p class="snippet__meta">by <span>Jan C. Bierowiec</span> on <span>Apr 11, 2025</span></p>
-        <p class="snippet__body">test2 desc</p>
-        <a href="/blog/2025-04-11-test-2/" class="btn btn--primary">Continue Reading</a>
-      </article>
-    </li><li>
-      <article class="snippet">
-        <img src="/assets/blog/summer_streets_2023.jpg" alt="Image of Park Ave closed off for cyclists, runners, and skaters" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2023-08-13-summer-streets-nyc-2023/">Summer Streets NYC 2023</a></h3>
-        <p class="snippet__meta">by <span>The Anonymous New Yorker</span> on <span>Aug 13, 2023</span></p>
-        <p class="snippet__body">My second adventure. Although it took place in the heart of the city, that being Manhattan, it was a great opportunity to exercise and to view the city from a different angle. An angle where every New Yorker came together to enjoy what the greatest city in the world has to offer. That being a time to spend with friends and family and taking in the marvels of infrastructure and nature without stressing over a deadline or a chore.</p>
-        <a href="/blog/2023-08-13-summer-streets-nyc-2023/" class="btn btn--primary">Continue Reading</a>
-      </article>
-    </li><li>
-      <article class="snippet">
-        <img src="/assets/blog/article-2.jpg" alt="An image of Rockaway Beach in Queens, NYC" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2023-07-29-astoria-park-to-rockaway-beach/">Astoria Park to Rockaway Beach</a></h3>
-        <p class="snippet__meta">by <span>The Anonymous New Yorker</span> on <span>Jul 29, 2023</span></p>
-        <p class="snippet__body">The first of my adventures. Although it took place within the city, the goal still remained the same, to take part in a trip that would make you feel that you are outside of the stresses of city life.</p>
-        <a href="/blog/2023-07-29-astoria-park-to-rockaway-beach/" class="btn btn--primary">Continue Reading</a>
-      </article>
-    </li><li>
       <article class="snippet">
         <img src="/assets/blog/article-1.jpg" alt="An image of NYC&#39;s Central Park" class="snippet__image">
         <h3 class="snippet__title"><a href="/blog/2023-07-27-my-first-article/">My First Blog</a></h3>
@@ -116,24 +77,6 @@
           }
         });
       }
-    </script>
-
-    <script>
-      // Theme toggle logic
-      (function () {
-        var toggle = document.querySelector('[data-theme-toggle]');
-        if (!toggle) return;
-
-        toggle.addEventListener('click', function () {
-          var root = document.documentElement;
-          var current = root.getAttribute('data-theme') || 'light';
-          var next = current === 'light' ? 'dark' : 'light';
-          root.setAttribute('data-theme', next);
-          try {
-            localStorage.setItem('theme', next);
-          } catch (e) {}
-        });
-      })();
     </script>
 </body>
 </html>

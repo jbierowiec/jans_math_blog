@@ -5,21 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My homepage</title>
 
-    
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored || (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
-      })();
-    </script>
-
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -46,45 +31,43 @@
 </header>
 
     <main class="page-main">
-              
+        
 <section class="hero">
   <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">Welcome to my blog!</h1>
-        <p>Have you ever had enough of the city and wanted to escape it just for a few hours without leaving it? Just far enough to breathe in the fresh air and relax a little? Well then you came to the right place! I use this space to record all my adventures just outside of NYC, sharing how I have planned them, and my experience with the places I have been to. Feel free to get inspired to plan your own short getaway from the city as well!</p>
-        <p>Below are some of my favorite articles, or you can go to the blog page to see my most recent posts.</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-        </div>
+    <div class="hero__content flow">
+      <h1 class="section-title">Welcome to my blog!</h1>
+      <p>
+        In the rising age of AI, it is more important than ever to have a sharp
+        mind and a solid understanding of what you know and what you are doing.
+        Mathematical problems and puzzles are a great way to maintain and
+        continuously train your brain, improving your problem-solving skills.
+        This blog is dedicated to sharing interesting mathematical problems and
+        puzzles that I have solved—many of which challenged me at first, as the
+        solution is not always straightforward or obvious. I hope whoever reads
+        my posts will find them educational, and take an interest to sharpen
+        their brain to keep it brain-fresh, not brain-rotted.
+      </p>
+      <div class="flex-group">
+        <a href="#featured-articles" class="btn btn--primary"
+          >Featured articles</a
+        >
+        <a href="./blog" class="btn btn--neutral">Most recent articles</a>
       </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
+    </div>
+    <div>
+      <img src="//unsplash.it/510" alt="" class="hero__image" />
+    </div>
   </div>
 </section>
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
+    <h2 class="section-title text-center">Featured articles</h2>
+    <p class="text-center">
+      Here is a sample of articles which I feel give you a good idea of what
+      this site is all about.
+    </p>
     <ul role="list" class="articles__list flow"><li>
-      <article class="snippet">
-        <img src="/assets/blog/summer_streets_2023.jpg" alt="Image of Park Ave closed off for cyclists, runners, and skaters" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2023-08-13-summer-streets-nyc-2023/">Summer Streets NYC 2023</a></h3>
-        <p class="snippet__meta">by <span>The Anonymous New Yorker</span> on <span>Aug 13, 2023</span></p>
-        <p class="snippet__body">My second adventure. Although it took place in the heart of the city, that being Manhattan, it was a great opportunity to exercise and to view the city from a different angle. An angle where every New Yorker came together to enjoy what the greatest city in the world has to offer. That being a time to spend with friends and family and taking in the marvels of infrastructure and nature without stressing over a deadline or a chore.</p>
-        <a href="/blog/2023-08-13-summer-streets-nyc-2023/" class="btn btn--primary">Continue Reading</a>
-      </article>
-    </li><li>
-      <article class="snippet">
-        <img src="/assets/blog/article-2.jpg" alt="An image of Rockaway Beach in Queens, NYC" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2023-07-29-astoria-park-to-rockaway-beach/">Astoria Park to Rockaway Beach</a></h3>
-        <p class="snippet__meta">by <span>The Anonymous New Yorker</span> on <span>Jul 29, 2023</span></p>
-        <p class="snippet__body">The first of my adventures. Although it took place within the city, the goal still remained the same, to take part in a trip that would make you feel that you are outside of the stresses of city life.</p>
-        <a href="/blog/2023-07-29-astoria-park-to-rockaway-beach/" class="btn btn--primary">Continue Reading</a>
-      </article>
-    </li><li>
       <article class="snippet">
         <img src="/assets/blog/article-1.jpg" alt="An image of NYC&#39;s Central Park" class="snippet__image">
         <h3 class="snippet__title"><a href="/blog/2023-07-27-my-first-article/">My First Blog</a></h3>
@@ -94,7 +77,7 @@
       </article>
     </li></ul>
   </div>
-</section> 
+</section>
 
     </main>
     <footer class="site-footer">
@@ -123,24 +106,6 @@
           }
         });
       }
-    </script>
-
-    <script>
-      // Theme toggle logic
-      (function () {
-        var toggle = document.querySelector('[data-theme-toggle]');
-        if (!toggle) return;
-
-        toggle.addEventListener('click', function () {
-          var root = document.documentElement;
-          var current = root.getAttribute('data-theme') || 'light';
-          var next = current === 'light' ? 'dark' : 'light';
-          root.setAttribute('data-theme', next);
-          try {
-            localStorage.setItem('theme', next);
-          } catch (e) {}
-        });
-      })();
     </script>
 </body>
 </html>
