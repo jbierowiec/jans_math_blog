@@ -1,11 +1,13 @@
 ---
 title: My First Blog
+description: ''
 author: The Anonymous New Yorker
-date: 2023-07-27
-tags: ["post", "featured"]
+date: 2023-07-27T00:00:00.000Z
+tags:
+  - post
+  - featured
 image: /assets/blog/article-1.jpg
 imageAlt: An image of NYC's Central Park
-description: A short introductory article to my blog and what its all about!
 status: published
 ---
 
