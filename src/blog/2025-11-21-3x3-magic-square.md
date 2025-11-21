@@ -59,28 +59,84 @@ corner, move one cell directly down instead.
 
 Below is a correctly constructed 3×3 magic square using the Siamese method:
 
-|   | 1 |   |
+|   |   |   |
 | - | - | - |
+|   | 1 |   |
 |   |   |   |
 |   |   |   |
 
 Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
 
+|   |   |   |
+| - | - | - |
+|   | 1 |   |
+|   |   |   |
+|   |   | 2 |
+
 Up and to the right would go out of bounds, so we loop around, and number 3 is at the first column, second row.
+
+|   |   |   |
+| - | - | - |
+|   | 1 |   |
+| 3 |   |   |
+|   |   | 2 |
+
 
 Now, when trying to go up to the right, number 1 is encountered, so we go down one from 3, and write number 4 in the first column, third row.
 
+|   |   |   |
+| - | - | - |
+|   | 1 |   |
+| 3 |   |   |
+| 4 |   | 2 |
+
 Up and to the right would yield number 5 in the second column, second row.
+
+|   |   |   |
+| - | - | - |
+|   | 1 |   |
+| 3 | 5 |   |
+| 4 |   | 2 |
 
 Up and to the right would yield number 6 in the third column, first row.
 
+|   |   |   |
+| - | - | - |
+|   | 1 | 6 |
+| 3 | 5 |   |
+| 4 |   | 2 |
+
 Now, when trying to go up to the right, number 4 is encountered, so we go down one from 6, and write number 7 in the third column, second row.
+
+|   |   |   |
+| - | - | - |
+|   | 1 | 6 |
+| 3 | 5 | 7 |
+| 4 |   | 2 |
 
 Up and to the right would go out of bounds, so we loop around, and number 8 is at the first column, first row.
 
+|   |   |   |
+| - | - | - |
+| 8 | 1 | 6 |
+| 3 | 5 | 7 |
+| 4 |   | 2 |
+
 Up and to the right would go out of bounds, so we loop around, and number 9 is at the second column, third row.
 
+|   |   |   |
+| - | - | - |
+| 8 | 1 | 6 |
+| 3 | 5 | 7 |
+| 4 | 9 | 2 |
+
 The final result is the following.
+
+|   |   |   |
+| - | - | - |
+| 8 | 1 | 6 |
+| 3 | 5 | 7 |
+| 4 | 9 | 2 |
 
 ## Validating the Magic Square
 
