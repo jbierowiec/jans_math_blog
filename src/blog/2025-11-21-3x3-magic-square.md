@@ -15,47 +15,69 @@ status: published
 ---
 ## What is a Magic Square?
 
-A magic square is a square grid filled with distinct positive integers such that the sum of the numbers in each row, each column, and both main diagonals is the same.  
-This constant sum is called the **magic constant**.
+A **magic square** is a square grid filled with distinct positive integers such that the sum of the numbers in each row, each column, and both main diagonals is the same. This constant sum is called the **magic constant**.
 
 ---
 
 ## Magic Constant Formula
 
-For an \( n \times n \) magic square, the magic constant \( M \) is:
+For a *n × n* magic square, the magic constant *M* is given by:
 
-\[
+\\[
 M = \frac{n(n^2 + 1)}{2}
-\]
+\\]
 
-For a \( 3 \times 3 \):
+For a 3 × 3 square:
 
-\[
+\\[
 M = \frac{3(3^2 + 1)}{2}
 = \frac{3(9 + 1)}{2}
 = \frac{30}{2}
 = 15
-\]
+\\]
 
-Each row, each column, and both diagonals must add up to **15**.
-
----
-
-## Constructing an Odd-Order Magic Square
-
-The simplest method is the **Siamese Method (De la Loubère Method)**.  
-The algorithm:
-
-1. **Start** with the number **1** in the middle of the top row.
-2. **Move up and right** to place the next number.  
-   If this goes out of bounds, wrap around.
-3. If the target cell is already filled **or** you move outside the **top-right corner**,  
-   then **move down one** instead.
-4. **Repeat** until all cells are filled.
+Each row, each column, and both main diagonals must add up to 15.
 
 ---
 
-# Validating the Magic Square
+## Constructing an odd order Magic Square
+
+The simplest method to construct an odd-order magic square is the **Siamese method** or the **De la Loubère method**. The Siamese method makes the creation of magic squares straightforward. The algorithm for doing so is the following.
+
+Step 1: Start with the number 1 in the middle of the top row.
+
+Step 2: Move up and right to place the next number. If this move goes out of bounds, wrap around.
+
+Step 3: If the cell is already filled or you move outside the top-right
+corner, move one cell directly down instead.
+
+Step 4: Repeat Steps 2 & 3 until the square is filled.
+
+---
+
+## Finding the 3×3 Magic Square
+
+Below is a correctly constructed 3×3 magic square using the Siamese method:
+
+Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
+
+Up and to the right would go out of bounds, so we loop around, and number 3 is at the first column, second row.
+
+Now, when trying to go up to the right, number 1 is encountered, so we go down one from 3, and write number 4 in the first column, third row.
+
+Up and to the right would yield number 5 in the second column, second row.
+
+Up and to the right would yield number 6 in the third column, first row.
+
+Now, when trying to go up to the right, number 4 is encountered, so we go down one from 6, and write number 7 in the third column, second row.
+
+Up and to the right would go out of bounds, so we loop around, and number 8 is at the first column, first row.
+
+Up and to the right would go out of bounds, so we loop around, and number 9 is at the second column, third row.
+
+The final result is the following.
+
+## Validating the Magic Square
 
 ### Rows
 - Row 1: \(8 + 1 + 6 = 15\)
