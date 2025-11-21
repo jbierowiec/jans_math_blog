@@ -3,11 +3,12 @@ layout: 'base.njk'
 ---
 
 <article class="main-article">
-<div class="container container--narrow flow">
-  
+  <div class="container container--narrow flow">
+
     <h1 class="article-title">
       {{ title }}
     </h1>
+
     <figure class="main-article__figure">
       <img src="{{ image }}" alt="{{ imageAlt }}">
       <figcaption>
@@ -15,25 +16,31 @@ layout: 'base.njk'
       </figcaption>
     </figure>
 
-    <section>
-      <h3>Watch Video:</h3>
-      <video controls width="100%">
-        <source src="{{ video }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-    
+    {# Optional embedded video if provided in front matter #}
+    {% if video %}
+      <section class="main-article__video flow">
+        <h2 class="article-subtitle">Video</h2>
+        <video class="main-article__video-player" controls preload="metadata">
+          <source src="{{ video }}" type="video/mp4">
+          Your browser does not support the video tag. You can
+          <a href="{{ video }}">download the video here</a>.
+        </video>
+      </section>
+    {% endif %}
+
     {{ content | safe }}
 
-    <section>
-      <div class="link">
-        <p>
-          <a class="maps" href="{{ pdf }}" target="_blank">
-            Click here to view the PDF
-          </a>
-        </p>
-      </div>
-    </section>
-  
-</div>
+    {% if pdf %}
+      <section class="article-resource">
+        <div class="link">
+          <p>
+            <a class="maps" href="{{ pdf }}" target="_blank" rel="noopener noreferrer">
+              Click here to view the PDF
+            </a>
+          </p>
+        </div>
+      </section>
+    {% endif %}
+
+  </div>
 </article>

@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astoria Park to Rockaway Beach</title>
+
+    
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -11,13 +27,11 @@
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 26.6" class="logo" width="8rem" fill="var(--logo-color, #000)">
-  <path d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"/>
-</svg>
-      </div>
-      <nav>
-        
+      <a href="/" class="site-brand">
+        <div class="site-brand__title">Jan's Math Blog</div>
+      </a>
+
+      <nav aria-label="Main navigation">
         <ul role="list" class="nav-list flex-group">
           <li>
             <a href="/">Home</a>
@@ -30,49 +44,112 @@
     </div>
   </div>
 </header>
-    <main>
+
+    <main class="page-main">
         
 <article class="main-article">
-<div class="container container--narrow flow">
-  
+  <div class="container container--narrow flow">
+
     <h1 class="article-title">
       Astoria Park to Rockaway Beach
     </h1>
+
     <figure class="main-article__figure">
       <img src="/assets/blog/article-2.jpg" alt="An image of Rockaway Beach in Queens, NYC">
       <figcaption>
         An image of Rockaway Beach in Queens, NYC
       </figcaption>
     </figure>
+
     
+    
+
     <p>This trip came about rather spontaneously. My good friend from high school texted me that he got a new bike and wanted to try out something new. A trip from the top of Queens to the bottom of Queens, that being from Astoria Park to Rockaway Beach. Previous to that message I had no plans other than work, so to see my friend offer such a proposal, was a blessing.</p>
 <p>Due to the idea's unplanned nature, and short notice to when we would do it, I decided to look at the route we would take and to plan using Google's My Maps. The route is relatively straightforward. We would start at the corner of Hoyt Ave S and 21st Street at the tip of Astoria Park, make our way down towards Vernon Boulevard to go along the East River, and once we would hit the Queensboro Bridge in Long Island City, we would make our way up along Queens Plaza and continue onto Queens Boulevard until we would reach the Queens Center Mall in Elmhurst. Once we would get to that point, we would have completed about a third of the trail. We would then make a 90 degree turn onto Woodhaven Boulevard. We would travel all the way down Woodhaven Boulevard until we would reach Ozone Park, where we would then continue down Cross Bay Boulevard and crossing the Cross Bay Veterans Memorial Bridge reaching our final destination of Rockaway Beach.</p>
-<p>According to planned out map, this route is 18 miles (~29 km) long, with an estimated time of travel to be 1 hour and 38 minutes. Mind you, this is in one direction, so for the total trail, we would complete 36 miles (~58 km) in an ideal time of 3 hours and 16 minutes.</p>
-<p>This was the plan I looked into for the trip. For the full layout of specifics regarding the route, time and mileage, check out the image below:</p>
-<img src="/assets/blog/AstoriaParktoRockawayBeach.png" alt="Google Maps">
+<p>According to planned out map, this route is 20 miles (~32.2 km) long, with an estimated time of travel to be 2 hours. Mind you, this is in one direction, so for the total trail, we would complete 40 miles (~64.4 km) in an ideal time of 4 hours.</p>
+<p>This was the plan I looked into for the trip. For the full layout of specifics regarding the route, time and mileage, check out the PDF below:</p>
+<div class="link"><p><a class="pdf" href="/assets/blog/AstoriaParktoRockawayBeach.pdf" target="_blank">Click here to view PDF</a></p></div>
+<p>Me and my friend cycled at a smooth pace for the first two thirds of the journey. Once we reached Howard Beach, we both felt a definite, but not intense head wind. At this point, we were slowed down by the wind, and we had to pedal stronger, but this made the reward of reaching the beach more encouraging. Once we crossed the Cross Bay Veterans Memorial Bridge, we we a few blocks away from our final destination.</p>
+<p>Once we reached the boardwalk we both locked up our bikes and made our way to the beach. We did a couple activities on the beach, first we started with a few games of handball in one of the many handball courts on the beach, after that, we walked and talked on the boardwalk, and then we got into the boardwalk. This all may seem like something that can be done in an hour or two, but when having a good time, time flies by quickly.</p>
+<p>We started our trip at 12:00 and got to the beach at 2:12. We then hung out at the beach until 6:38. It was when the sun started to set that we decided to make our way back. During the way back we also stopped by to get some Chipotle, which took about 40 minutes since we ordered to stay and the line that was ahead of us. Once finished, the sky started to turn a darker blue. By the time we were halfway through Queens Boulevard, the sky was dark with the moon bright. The skyline of Manhattan was in view and we both knew that we were back in the city and that our itinerary was steadily coming to an end.</p>
+<p>For a trip that is 20 miles long, taking up a quarter of the day cycling, and about another quarter and change in relaxing environment of the beach without a worry in the world, I can truly say that this trip was a success. With a combination of exercise, motivation to make it to the beach, and moments of friendship, this was a well seized day.</p>
+<p>I recommend for others to try out this trip and on their own, with a friend, or even a group of friends. Feel free to follow the route I created or make your own. That is all for this post! See you in the next one!</p>
+<style>
+.link {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 70%;
+    background: lightgray;
+    margin: auto;
+    padding: 10px;
+}
+.pdf {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.pdf:hover {
+    text-decoration: underline;
+}
+@media (max-width: 650px) {
+    .link {
+        width: 90%;
+    }
+}
+</style>
 
-  
-</div>
+
+    
+
+  </div>
 </article>
 
     </main>
-        <footer class="site-footer">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 26.6" class="logo" width="8rem" fill="var(--logo-color, #000)">
-  <path d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"/>
-</svg>
-  <p>© 2020 escnyc.com. All rights reserved.</p>
+    <footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        Jan's Math Blog
+      </div>
+
+      <p class="site-footer__meta">
+        © 2025 Jan's Math Blog. All rights reserved.
+      </p>
+    </div>
+  </div>
 </footer>
 
+
     <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+      // Netlify Identity: keep your existing behaviour
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
+    </script>
+
+    <script>
+      // Theme toggle logic
+      (function () {
+        var toggle = document.querySelector('[data-theme-toggle]');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', function () {
+          var root = document.documentElement;
+          var current = root.getAttribute('data-theme') || 'light';
+          var next = current === 'light' ? 'dark' : 'light';
+          root.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('theme', next);
+          } catch (e) {}
+        });
+      })();
+    </script>
 </body>
 </html>
