@@ -44,20 +44,25 @@ Each row, each column, and both main diagonals must add up to 15.
 
 The simplest method to construct an odd-order magic square is the **Siamese method** or the **De la Loubère method**. The Siamese method makes the creation of magic squares straightforward. The algorithm for doing so is the following.
 
-Step 1: Start with the number 1 in the middle of the top row.
+1. Start with the number 1 in the middle of the top row.
 
-Step 2: Move up and right to place the next number. If this move goes out of bounds, wrap around.
+2. Move up and right to place the next number. If this move goes out of bounds, wrap around.
 
-Step 3: If the cell is already filled or you move outside the top-right
+3. If the cell is already filled or you move outside the top-right
 corner, move one cell directly down instead.
 
-Step 4: Repeat Steps 2 & 3 until the square is filled.
+4. Repeat Steps 2 & 3 until the square is filled.
 
 ---
 
 ## Finding the 3×3 Magic Square
 
 Below is a correctly constructed 3×3 magic square using the Siamese method:
+
+|  | 1 |  |
+|  |   |  |
+|  |   |  |
+|  |   |  |
 
 Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
 
