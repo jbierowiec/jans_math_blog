@@ -59,10 +59,10 @@ corner, move one cell directly down instead.
 
 Below is a correctly constructed 3×3 magic square using the Siamese method:
 
-|  | 1 |  |
-|  |   |  |
-|  |   |  |
-|  |   |  |
+|   | 1 |   |
+| - | - | - |
+|   |   |   |
+|   |   |   |
 
 Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
 
