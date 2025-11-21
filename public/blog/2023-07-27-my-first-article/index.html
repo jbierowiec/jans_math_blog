@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Blog</title>
+    <title>How to Construct a 3×3 Magic Square</title>
 
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -36,13 +36,13 @@
   <div class="container container--narrow flow">
 
     <h1 class="article-title">
-      My First Blog
+      How to Construct a 3×3 Magic Square
     </h1>
 
     <figure class="main-article__figure">
-      <img src="/assets/blog/article-1.jpg" alt="An image of NYC&#39;s Central Park">
+      <img src="/assets/blog/3x3_magic_square.png" alt="An image of a 3×3 Magic Square">
       <figcaption>
-        An image of NYC&#39;s Central Park
+        An image of a 3×3 Magic Square
       </figcaption>
     </figure>
 
@@ -77,8 +77,8 @@ For now this is all. See you soon!</p>
 </footer>
 
 
+    
     <script>
-      // Netlify Identity: keep your existing behaviour
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -88,6 +88,19 @@ For now this is all. See you soon!</p>
           }
         });
       }
+    </script>
+
+    
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 </body>
 </html>

@@ -69,10 +69,10 @@
     </p>
     <ul role="list" class="articles__list flow"><li>
       <article class="snippet">
-        <img src="/assets/blog/article-1.jpg" alt="An image of NYC&#39;s Central Park" class="snippet__image">
-        <h3 class="snippet__title"><a href="/blog/2023-07-27-my-first-article/">My First Blog</a></h3>
-        <p class="snippet__meta">by <span>The Anonymous New Yorker</span> on <span>Jul 26, 2023</span></p>
-        <p class="snippet__body">A short introductory article to my blog and what its all about!</p>
+        <img src="/assets/blog/3x3_magic_square.png" alt="An image of a 3×3 Magic Square" class="snippet__image">
+        <h3 class="snippet__title"><a href="/blog/2023-07-27-my-first-article/">How to Construct a 3×3 Magic Square</a></h3>
+        <p class="snippet__meta">by <span>Janek</span> on <span>Nov 21, 2025</span></p>
+        <p class="snippet__body">The post will feature how to mathematically construct a 3×3 Magic Square, as well as what constitutes a Magic Square in the first place. </p>
         <a href="/blog/2023-07-27-my-first-article/" class="btn btn--primary">Continue Reading</a>
       </article>
     </li></ul>
@@ -95,8 +95,8 @@
 </footer>
 
 
+    
     <script>
-      // Netlify Identity: keep your existing behaviour
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -106,6 +106,19 @@
           }
         });
       }
+    </script>
+
+    
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 </body>
 </html>
