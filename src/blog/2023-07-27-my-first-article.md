@@ -4,11 +4,11 @@ description: >-
   The post will feature how to mathematically construct a 3×3 Magic Square, as
   well as what constitutes a Magic Square in the first place. 
 author: Janek
-date: 2025-11-21T14:00:00-05:00
+date: 2025-11-21T19:00:00.000Z
 tags:
   - post
   - featured
-image: /assets/blog/article-1.jpg
+image: /assets/blog/3x3_magic_square.png
 imageAlt: An image of NYC's Central Park
 status: published
 ---
