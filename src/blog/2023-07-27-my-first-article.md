@@ -1,8 +1,10 @@
 ---
-title: My First Blog
-description: ''
+title: How to Construct a 3×3 Magic Square
+description: >-
+  The post will feature how to mathematically construct a 3×3 Magic Square, as
+  well as what constitutes a Magic Square in the first place. 
 author: Janek
-date: 2023-07-27T00:00:00.000Z
+date: 2025-11-21T14:00:00-05:00
 tags:
   - post
   - featured
