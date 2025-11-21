@@ -1,7 +1,7 @@
 ---
 title: My First Blog
 description: ''
-author: The Anonymous New Yorker
+author: Janek
 date: 2023-07-27T00:00:00.000Z
 tags:
   - post
