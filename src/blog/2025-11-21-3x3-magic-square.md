@@ -8,7 +8,7 @@ date: 2025-11-21T19:00:00.000Z
 tags:
   - post
   - featured
-image: /assets/blog/3x3_empty.png
+image: /assets/blog/3x3_empty_grid.png
 imageAlt: An image of a 3×3 Magic Square
 pdf: /assets/blog/magic_square_3x3.pdf
 status: published
