@@ -9,7 +9,7 @@ tags:
   - ''
 image: /assets/blog/4x4_empty.png
 pdf: /assets/blog/magic_square_4x4.pdf
-status: draft
+status: published
 ---
 
 ## What is a Magic Square?
