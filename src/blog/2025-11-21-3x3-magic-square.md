@@ -10,7 +10,7 @@ tags:
   - featured
 image: /assets/blog/3x3_magic_square.png
 imageAlt: An image of a 3×3 Magic Square
-pdf: /assets/blog/magic_square_3x3.pdf
+pdf: /assets/blog/magic_square_4x4.pdf
 status: published
 ---
 ## What is a Magic Square?
