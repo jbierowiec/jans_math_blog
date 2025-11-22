@@ -59,23 +59,13 @@ corner, move one cell directly down instead.
 
 Below is a correctly constructed 3×3 magic square using the Siamese method:
 
-<table style="border-collapse: collapse; text-align: center;">
-  <tr>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-    <td style="border: 2px solid black; padding: 8px;">1</td>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-  </tr>
-  <tr>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-  </tr>
-  <tr>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-    <td style="border: 2px solid black; padding: 8px;"></td>
-  </tr>
-</table>
++=====+=====+=====+
+|  1  |     |     |
++=====+=====+=====+
+|     |     |     |
++=====+=====+=====+
+|     |     |     |
++=====+=====+=====+
 
 Up and to the right would go out of bounds, so we loop around, and number 2 is at the third column, third row.
 
