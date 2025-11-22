@@ -4,7 +4,7 @@ description: >-
   The post will feature how to mathematically construct a 4×4 Magic Square, as
   well as what constitutes a Magic Square in the first place. 
 author: Janek
-date: 2025-11-29T19:58:30.000Z
+date: 2025-11-23T22:00:00-05:00
 tags:
   - ''
 image: /assets/blog/4x4_empty_grid.png
