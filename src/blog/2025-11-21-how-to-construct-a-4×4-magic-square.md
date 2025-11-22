@@ -7,7 +7,7 @@ author: Janek
 date: 2025-11-29T19:58:30.000Z
 tags:
   - ''
-image: /assets/blog/4x4_empty.png
+image: /assets/blog/4x4_empty_grid.png
 pdf: /assets/blog/magic_square_4x4.pdf
 status: published
 ---
