@@ -4,7 +4,7 @@ description: >-
   The post will feature how to mathematically construct a 3×3 Magic Square, as
   well as what constitutes a Magic Square in the first place. 
 author: Janek
-date: 2025-11-23T22:00:00-05:00
+date: 2025-11-23T12:00:00-05:00
 tags:
   - post
   - featured
