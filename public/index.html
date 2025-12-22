@@ -1,104 +1,128 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My homepage</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
 
-    <link rel="stylesheet" href="/style.css">
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <script defer src="/js/hero-random-image.js"></script>
+  </head>
+  <body>
     <header class="page-header">
-  <div class="container">
-    <div class="page-header__content">
-      <a href="/" class="site-brand">
-        <div class="site-brand__title">Jan's Math Blog</div>
-      </a>
+      <div class="container">
+        <div class="page-header__content">
+          <a href="/" class="site-brand">
+            <div class="site-brand__title">Jan's Math Blog</div>
+          </a>
 
-      <nav aria-label="Main navigation">
-        <ul role="list" class="nav-list flex-group">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+          <nav aria-label="Main navigation">
+            <ul role="list" class="nav-list flex-group">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
     <main class="page-main">
-        
-<section class="hero">
-  <div class="container flow">
-    <div class="hero__content flow">
-      <h1 class="section-title">Welcome to my blog!</h1>
-      <p>
-        In the rising age of AI, it is more important than ever to have a sharp
-        mind and a solid understanding of what you know and what you are doing.
-        Mathematical problems and puzzles are a great way to maintain and
-        continuously train your brain, improving your problem-solving skills.
-        This blog is dedicated to sharing interesting mathematical problems and
-        puzzles that I have solved—many of which challenged me at first, as the
-        solution is not always straightforward or obvious. I hope whoever reads
-        my posts will find them educational, and take an interest to sharpen
-        their brain to keep it brain-fresh, not brain-rotted.
-      </p>
-      <div class="flex-group">
-        <a href="#featured-articles" class="btn btn--primary"
-          >Featured articles</a
-        >
-        <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-      </div>
-    </div>
-    <div>
-      <img src="//unsplash.it/510" alt="" class="hero__image" />
-    </div>
-  </div>
-</section>
+      <section class="hero">
+        <div class="container flow">
+          <div class="hero__content flow">
+            <h1 class="section-title">Welcome to my blog!</h1>
+            <p>
+              In the rising age of AI, it is more important than ever to have a
+              sharp mind and a solid understanding of what you know and what you
+              are doing. Mathematical problems and puzzles are a great way to
+              maintain and continuously train your brain, improving your
+              problem-solving skills. This blog is dedicated to sharing
+              interesting mathematical problems and puzzles that I have
+              solved—many of which challenged me at first, as the solution is
+              not always straightforward or obvious. I hope whoever reads my
+              posts will find them educational, and take an interest to sharpen
+              their brain to keep it brain-fresh, not brain-rotted.
+            </p>
+            <div class="flex-group">
+              <a href="#featured-articles" class="btn btn--primary"
+                >Featured articles</a
+              >
+              <a href="./blog" class="btn btn--neutral">Most recent articles</a>
+            </div>
+          </div>
+          <div>
+            <img
+              id="heroImage"
+              src="/assets/hero/math-01.png"
+              alt="Math hero image"
+              class="hero__image"
+            />
+          </div>
+        </div>
+      </section>
 
-<section id="featured-articles" class="featured-articles">
-  <div class="container flow">
-    <h2 class="section-title text-center">Featured articles</h2>
-    <p class="text-center">
-      Here is a sample of articles which I feel give you a good idea of what
-      this site is all about.
-    </p>
-    <ul role="list" class="articles__list flow"><li>
-  <article class="snippet">
-    <img src="/assets/blog/3x3_magic_square.png" alt="An image of a 3×3 Magic Square" class="snippet__image">
-    <h3 class="snippet__title"><a href="/blog/2025-11-21-3x3-magic-square/">How to Construct a 3×3 Magic Square</a></h3>
-    <p class="snippet__meta">by <span>Janek</span> on <span>Nov 21, 2025</span></p>
-    <p class="snippet__body">The post will feature how to mathematically construct a 3×3 Magic Square, as well as what constitutes a Magic Square in the first place. </p>
-    <a href="/blog/2025-11-21-3x3-magic-square/" class="btn btn--primary">Continue Reading</a>
-  </article>
-</li></ul>
-  </div>
-</section>
-
+      <section id="featured-articles" class="featured-articles">
+        <div class="container flow">
+          <h2 class="section-title text-center">Featured articles</h2>
+          <p class="text-center">
+            Here is a sample of articles which I feel give you a good idea of
+            what this site is all about.
+          </p>
+          <ul role="list" class="articles__list flow">
+            <li>
+              <article class="snippet">
+                <img
+                  src="/assets/blog/3x3_empty_grid.png"
+                  alt="An image of a 3×3 Magic Square"
+                  class="snippet__image"
+                />
+                <h3 class="snippet__title">
+                  <a href="/blog/2025-11-21-3x3-magic-square/"
+                    >How to Construct a 3×3 Magic Square</a
+                  >
+                </h3>
+                <p class="snippet__meta">
+                  by <span>Janek</span> on <span>Nov 23, 2025</span>
+                </p>
+                <p class="snippet__body">
+                  The post will feature how to mathematically construct a 3×3
+                  Magic Square, as well as what constitutes a Magic Square in
+                  the first place.
+                </p>
+                <a
+                  href="/blog/2025-11-21-3x3-magic-square/"
+                  class="btn btn--primary"
+                  >Continue Reading</a
+                >
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        Jan's Math Blog
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">Jan's Math Blog</div>
+
+          <p class="site-footer__meta">
+            © 2025 Jan's Math Blog. All rights reserved.
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <p class="site-footer__meta">
-        © 2025 Jan's Math Blog. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
-
-
-    
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
+        window.netlifyIdentity.on("init", (user) => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
@@ -108,17 +132,24 @@
       }
     </script>
 
-    
     <script>
       window.MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
       };
     </script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</body>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
 </html>

@@ -2,11 +2,11 @@
 title: How to Construct a 4×4 Magic Square
 description: >-
   The post will feature how to mathematically construct a 4×4 Magic Square, as
-  well as what constitutes a Magic Square in the first place. 
+  well as what constitutes a Magic Square in the first place.
 author: Janek
 date: 2025-11-30T12:00:00-05:00
 tags:
-  - ''
+  - ""
 image: /assets/blog/4x4_empty_grid.png
 pdf: /assets/blog/magic_square_4x4.pdf
 status: published
@@ -20,7 +20,7 @@ A **magic square** is a square grid filled with distinct positive integers such 
 
 ## Magic Constant Formula
 
-For a *n × n* magic square, the magic constant *M* is given by:
+For a _n × n_ magic square, the magic constant _M_ is given by:
 
 \\[
 M = \frac{n(n^2 + 1)}{2}
@@ -58,12 +58,12 @@ Below is a correctly constructed 4×4 magic square using this new algorithm.
 
 <center>
 
-|    |    |    |    |
-|----|----|----|----|
-|  1 |  2 |  3 |  4 |
-|  5 |  6 |  7 |  8 |
-|  9 | 10 | 11 | 12 |
-| 13 | 14 | 15 | 16 |
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 1   | 2   | 3   | 4   |
+| 5   | 6   | 7   | 8   |
+| 9   | 10  | 11  | 12  |
+| 13  | 14  | 15  | 16  |
 
 </center>
 
@@ -72,12 +72,12 @@ complement with respect to 17 (that is, 17− original number).
 
 <center>
 
-|    |    |    |    |
-|----|----|----|----|
-|  1 |    |    |  4 |
-|    |  6 |  7 |    |
-|    | 10 | 11 |    |
-| 13 |    |    | 16 |
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 1   |     |     | 4   |
+|     | 6   | 7   |     |
+|     | 10  | 11  |     |
+| 13  |     |     | 16  |
 
 </center>
 
@@ -101,17 +101,16 @@ Compliment Calculation:
 
 (Row 4, Column 3) 17 - 15 = 2
 
-
 The final result is the following.
 
 <center>
 
-|    |    |    |    |
-|----|----|----|----|
-|  1 | 15 | 14 |  4 |
-| 12 |  6 |  7 |  9 |
-|  8 | 10 | 11 |  5 |
-| 13 |  3 |  2 | 16 |
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 1   | 15  | 14  | 4   |
+| 12  | 6   | 7   | 9   |
+| 8   | 10  | 11  | 5   |
+| 13  | 3   | 2   | 16  |
 
 </center>
 
@@ -120,18 +119,21 @@ Now we will validate whether all the row numbers, column numbers, and diagonal n
 ## Validating the Magic Square
 
 Rows
+
 - Row 1: 1 + 15 + 14 + 4 = 34
 - Row 2: 12 + 6 + 7 + 9 = 34
 - Row 3: 8 + 10 + 11 + 5 = 34
 - Row 4: 13 + 3 + 2 + 16 = 34
 
 Columns
+
 - Column 1: 1 + 12 + 8 + 13 = 34
 - Column 2: 15 + 6 + 10 + 3 = 34
 - Column 3: 14 + 7 + 11 + 2 = 34
 - Column 4: 4 + 9 + 5 + 16 = 34
 
 Diagonals
+
 - Diagonal 1: 13 + 10 + 7 + 4 = 34
 - Diagonal 2: 1 + 6 + 11 + 16 = 34
 

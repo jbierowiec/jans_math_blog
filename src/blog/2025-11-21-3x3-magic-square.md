@@ -2,7 +2,7 @@
 title: How to Construct a 3×3 Magic Square
 description: >-
   The post will feature how to mathematically construct a 3×3 Magic Square, as
-  well as what constitutes a Magic Square in the first place. 
+  well as what constitutes a Magic Square in the first place.
 author: Janek
 date: 2025-11-23T12:00:00-05:00
 tags:
@@ -13,6 +13,7 @@ imageAlt: An image of a 3×3 Magic Square
 pdf: /assets/blog/magic_square_3x3.pdf
 status: published
 ---
+
 ## What is a Magic Square?
 
 A **magic square** is a square grid filled with distinct positive integers such that the sum of the numbers in each row, each column, and both main diagonals is the same. This constant sum is called the **magic constant**.
@@ -21,7 +22,7 @@ A **magic square** is a square grid filled with distinct positive integers such 
 
 ## Magic Constant Formula
 
-For a *n × n* magic square, the magic constant *M* is given by:
+For a _n × n_ magic square, the magic constant _M_ is given by:
 
 \\[
 M = \frac{n(n^2 + 1)}{2}
@@ -49,7 +50,7 @@ The simplest method to construct an odd-order magic square is the **Siamese meth
 2. Move up and right to place the next number. If this move goes out of bounds, wrap around.
 
 3. If the cell is already filled or you move outside the top-right
-corner, move one cell directly down instead.
+   corner, move one cell directly down instead.
 
 4. Repeat Steps 2 & 3 until the square is filled.
 
@@ -61,11 +62,11 @@ Below is a correctly constructed 3×3 magic square using the Siamese method:
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 |   |
-|   |   |   |
-|   |   |   |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   |     |
+|     |     |     |
+|     |     |     |
 
 </center>
 
@@ -73,11 +74,11 @@ Up and to the right would go out of bounds, so we loop around, and number 2 is a
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 |   |
-|   |   |   |
-|   |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   |     |
+|     |     |     |
+|     |     | 2   |
 
 </center>
 
@@ -85,11 +86,11 @@ Up and to the right would go out of bounds, so we loop around, and number 3 is a
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 |   |
-| 3 |   |   |
-|   |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   |     |
+| 3   |     |     |
+|     |     | 2   |
 
 </center>
 
@@ -97,11 +98,11 @@ Now, when trying to go up to the right, number 1 is encountered, so we go down o
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 |   |
-| 3 |   |   |
-| 4 |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   |     |
+| 3   |     |     |
+| 4   |     | 2   |
 
 </center>
 
@@ -109,11 +110,11 @@ Up and to the right would yield number 5 in the second column, second row.
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 |   |
-| 3 | 5 |   |
-| 4 |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   |     |
+| 3   | 5   |     |
+| 4   |     | 2   |
 
 </center>
 
@@ -121,11 +122,11 @@ Up and to the right would yield number 6 in the third column, first row.
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 | 6 |
-| 3 | 5 |   |
-| 4 |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   | 6   |
+| 3   | 5   |     |
+| 4   |     | 2   |
 
 </center>
 
@@ -133,37 +134,35 @@ Now, when trying to go up to the right, number 4 is encountered, so we go down o
 
 <center>
 
-|   |   |   |
-|---|---|---|
-|   | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+|     | 1   | 6   |
+| 3   | 5   | 7   |
+| 4   |     | 2   |
 
 </center>
-
 
 Up and to the right would go out of bounds, so we loop around, and number 8 is at the first column, first row.
 
 <center>
 
-|   |   |   |
-|---|---|---|
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 |   | 2 |
+|     |     |     |
+| --- | --- | --- |
+| 8   | 1   | 6   |
+| 3   | 5   | 7   |
+| 4   |     | 2   |
 
 </center>
-
 
 Up and to the right would go out of bounds, so we loop around, and number 9 is at the second column, third row.
 
 <center>
 
-|   |   |   |
-|---|---|---|
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 | 9 | 2 |
+|     |     |     |
+| --- | --- | --- |
+| 8   | 1   | 6   |
+| 3   | 5   | 7   |
+| 4   | 9   | 2   |
 
 </center>
 
@@ -171,30 +170,32 @@ The final result is the following.
 
 <center>
 
-|   |   |   |
-|---|---|---|
-| 8 | 1 | 6 |
-| 3 | 5 | 7 |
-| 4 | 9 | 2 |
+|     |     |     |
+| --- | --- | --- |
+| 8   | 1   | 6   |
+| 3   | 5   | 7   |
+| 4   | 9   | 2   |
 
 </center>
 
 ---
 
-
 ## Validating the Magic Square
 
 Rows
+
 - Row 1: 8 + 1 + 6 = 15
 - Row 2: 3 + 5 + 7 = 15
 - Row 3: 4 + 9 + 2 = 15
 
 Columns
+
 - Col 1: 8 + 3 + 4 = 15
 - Col 2: 1 + 5 + 9 = 15
 - Col 3: 6 + 7 + 2 = 15
 
 Diagonals
+
 - Diagonal 1: 8 + 5 + 2 = 15
 - Diagonal 2: 6 + 5 + 4 = 15
 

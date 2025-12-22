@@ -24,8 +24,8 @@
   /* Light theme colors (defaults) */
   --bg-body: #f5f7ff;
   --bg-surface: #ffffff;
-  --bg-surface-soft: #e8edff;           /* soft blue for cards/sections */
-  --bg-hero: #e0e7ff;                   /* solid hero background */
+  --bg-surface-soft: #e8edff; /* soft blue for cards/sections */
+  --bg-hero: #e0e7ff; /* solid hero background */
 
   --grid-color: rgba(148, 163, 184, 0.4);
 
@@ -191,8 +191,7 @@ button {
 .main-article {
   position: relative;
   background-color: var(--bg-body);
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
 }
@@ -433,11 +432,8 @@ html[data-theme="dark"] .hero__content {
   font-weight: var(--fw-600);
   cursor: pointer;
   text-decoration: none;
-  transition:
-    transform 120ms ease-out,
-    box-shadow 120ms ease-out,
-    background-color 120ms ease-out,
-    color 120ms ease-out;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out,
+    background-color 120ms ease-out, color 120ms ease-out;
 }
 
 .btn:focus-visible {

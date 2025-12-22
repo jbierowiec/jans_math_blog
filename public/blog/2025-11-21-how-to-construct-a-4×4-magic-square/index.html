@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Construct a 4×4 Magic Square</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <a href="/" class="site-brand">
+            <div class="site-brand__title">Jan's Math Blog</div>
+          </a>
+
+          <nav aria-label="Main navigation">
+            <ul role="list" class="nav-list flex-group">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <article class="main-article">
+        <div class="container container--narrow flow">
+          <h1 class="article-title">How to Construct a 4×4 Magic Square</h1>
+
+          <figure class="main-article__figure">
+            <img src="/assets/blog/4x4_empty_grid.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+
+          <h2>What is a Magic Square?</h2>
+          <p>
+            A <strong>magic square</strong> is a square grid filled with
+            distinct positive integers such that the sum of the numbers in each
+            row, each column, and both main diagonals is the same. This constant
+            sum is called the <strong>magic constant</strong>.
+          </p>
+          <hr />
+          <h2>Magic Constant Formula</h2>
+          <p>
+            For a <em>n × n</em> magic square, the magic constant <em>M</em> is
+            given by:
+          </p>
+          <p>\[ M = \frac{n(n^2 + 1)}{2} \]</p>
+          <p>For a 4 × 4 square:</p>
+          <p>
+            \[ M = \frac{4(4^2 + 1)}{2} = \frac{4(16 + 1)}{2} = \frac{68}{2} =
+            34 \]
+          </p>
+          <p>
+            Each row, each column, and both main diagonals must add up to 34.
+          </p>
+          <hr />
+          <h2>Constructing an even order Magic Square</h2>
+          <p>
+            In contrast to constructing an odd-order magic square, using the
+            <strong>Siamese method</strong> or the
+            <strong>De la Loubère method</strong>, a new strategy will be used.
+            To construct an even-order 4×4 magic square, the algorithm for doing
+            so is the following:
+          </p>
+          <ol>
+            <li>
+              <p>
+                Fill the entire 4 × 4 square with numbers from 1 to 16 in order.
+              </p>
+            </li>
+            <li>
+              <p>Identify the pattern of positions to keep and replace:</p>
+              <ul>
+                <li>
+                  Keep numbers in diagonally symmetric cells (top-left to
+                  bottom-right and top-right to bottom-left).
+                </li>
+                <li>
+                  Replace the rest with their complement with respect to 17
+                  (that is, 17−original number).
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <hr />
+          <h2>Finding the 4×4 Magic Square</h2>
+          <p>
+            Below is a correctly constructed 4×4 magic square using this new
+            algorithm.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            The numbers in diagonally symmetric cells (top-left to bottom-right
+            and top-right to bottom-left) are now kept in the same place,
+            whereas the other numbers are replaced with their complement with
+            respect to 17 (that is, 17− original number).
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td></td>
+                  <td></td>
+                  <td>16</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <hr />
+          <p>Compliment Calculation:</p>
+          <p>(Row 1, Column 2) 17 - 2 = 15</p>
+          <p>(Row 1, Column 3) 17 - 3 = 14</p>
+          <p>(Row 2, Column 1) 17 - 5 = 12</p>
+          <p>(Row 2, Column 4) 17 - 8 = 9</p>
+          <p>(Row 3, Column 1) 17 - 9 = 8</p>
+          <p>(Row 3, Column 4) 17 - 12 = 5</p>
+          <p>(Row 4, Column 2) 17 - 14 = 3</p>
+          <p>(Row 4, Column 3) 17 - 15 = 2</p>
+          <p>The final result is the following.</p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>15</td>
+                  <td>14</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>16</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Now we will validate whether all the row numbers, column numbers,
+            and diagonal numbers in fact add up to 34.
+          </p>
+          <h2>Validating the Magic Square</h2>
+          <p>Rows</p>
+          <ul>
+            <li>Row 1: 1 + 15 + 14 + 4 = 34</li>
+            <li>Row 2: 12 + 6 + 7 + 9 = 34</li>
+            <li>Row 3: 8 + 10 + 11 + 5 = 34</li>
+            <li>Row 4: 13 + 3 + 2 + 16 = 34</li>
+          </ul>
+          <p>Columns</p>
+          <ul>
+            <li>Column 1: 1 + 12 + 8 + 13 = 34</li>
+            <li>Column 2: 15 + 6 + 10 + 3 = 34</li>
+            <li>Column 3: 14 + 7 + 11 + 2 = 34</li>
+            <li>Column 4: 4 + 9 + 5 + 16 = 34</li>
+          </ul>
+          <p>Diagonals</p>
+          <ul>
+            <li>Diagonal 1: 13 + 10 + 7 + 4 = 34</li>
+            <li>Diagonal 2: 1 + 6 + 11 + 16 = 34</li>
+          </ul>
+          <hr />
+          <center>
+            <p><strong>Quod Erat Demonstrandum</strong></p>
+          </center>
+
+          <section class="article-resource">
+            <div class="link">
+              <p>
+                <a
+                  class="maps"
+                  href="/assets/blog/magic_square_4x4.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click here to view the PDF
+                </a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">Jan's Math Blog</div>
+
+          <p class="site-footer__meta">
+            © 2025 Jan's Math Blog. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>

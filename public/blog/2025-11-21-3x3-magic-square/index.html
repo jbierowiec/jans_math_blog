@@ -1,92 +1,479 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How to Construct a 3×3 Magic Square</title>
 
-    <link rel="stylesheet" href="/style.css">
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  </head>
+  <body>
     <header class="page-header">
-  <div class="container">
-    <div class="page-header__content">
-      <a href="/" class="site-brand">
-        <div class="site-brand__title">Jan's Math Blog</div>
-      </a>
+      <div class="container">
+        <div class="page-header__content">
+          <a href="/" class="site-brand">
+            <div class="site-brand__title">Jan's Math Blog</div>
+          </a>
 
-      <nav aria-label="Main navigation">
-        <ul role="list" class="nav-list flex-group">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+          <nav aria-label="Main navigation">
+            <ul role="list" class="nav-list flex-group">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/blog/">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
     <main class="page-main">
-        
-<article class="main-article">
-  <div class="container container--narrow flow">
+      <article class="main-article">
+        <div class="container container--narrow flow">
+          <h1 class="article-title">How to Construct a 3×3 Magic Square</h1>
 
-    <h1 class="article-title">
-      How to Construct a 3×3 Magic Square
-    </h1>
+          <figure class="main-article__figure">
+            <img
+              src="/assets/blog/3x3_empty_grid.png"
+              alt="An image of a 3×3 Magic Square"
+            />
+            <figcaption>An image of a 3×3 Magic Square</figcaption>
+          </figure>
 
-    <figure class="main-article__figure">
-      <img src="/assets/blog/3x3_magic_square.png" alt="An image of a 3×3 Magic Square">
-      <figcaption>
-        An image of a 3×3 Magic Square
-      </figcaption>
-    </figure>
-
-    
-    
-
-    <p>Below is a PDF document that I developed in LaTeX that walks through the definition of what a magic square is, what is the formula for calculating the constant that will be valid when numbers are added horizontally, vertically, and diagonally as well as how to construct an odd order Magic Square.</p>
-
-
-    
-      <section class="article-resource">
-        <div class="link">
+          <h2>What is a Magic Square?</h2>
           <p>
-            <a class="maps" href="/assets/blog/magic_square_3x3.pdf" target="_blank" rel="noopener noreferrer">
-              Click here to view the PDF
-            </a>
+            A <strong>magic square</strong> is a square grid filled with
+            distinct positive integers such that the sum of the numbers in each
+            row, each column, and both main diagonals is the same. This constant
+            sum is called the <strong>magic constant</strong>.
           </p>
+          <hr />
+          <h2>Magic Constant Formula</h2>
+          <p>
+            For a <em>n × n</em> magic square, the magic constant <em>M</em> is
+            given by:
+          </p>
+          <p>\[ M = \frac{n(n^2 + 1)}{2} \]</p>
+          <p>For a 3 × 3 square:</p>
+          <p>
+            \[ M = \frac{3(3^2 + 1)}{2} = \frac{3(9 + 1)}{2} = \frac{30}{2} = 15
+            \]
+          </p>
+          <p>
+            Each row, each column, and both main diagonals must add up to 15.
+          </p>
+          <hr />
+          <h2>Constructing an odd order Magic Square</h2>
+          <p>
+            The simplest method to construct an odd-order magic square is the
+            <strong>Siamese method</strong> or the
+            <strong>De la Loubère method</strong>. The Siamese method makes the
+            creation of magic squares straightforward. The algorithm for doing
+            so is the following.
+          </p>
+          <ol>
+            <li>
+              <p>Start with the number 1 in the middle of the top row.</p>
+            </li>
+            <li>
+              <p>
+                Move up and right to place the next number. If this move goes
+                out of bounds, wrap around.
+              </p>
+            </li>
+            <li>
+              <p>
+                If the cell is already filled or you move outside the top-right
+                corner, move one cell directly down instead.
+              </p>
+            </li>
+            <li>
+              <p>Repeat Steps 2 &amp; 3 until the square is filled.</p>
+            </li>
+          </ol>
+          <hr />
+          <h2>Finding the 3×3 Magic Square</h2>
+          <p>
+            Below is a correctly constructed 3×3 magic square using the Siamese
+            method:
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would go out of bounds, so we loop around, and
+            number 2 is at the third column, third row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would go out of bounds, so we loop around, and
+            number 3 is at the first column, second row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Now, when trying to go up to the right, number 1 is encountered, so
+            we go down one from 3, and write number 4 in the first column, third
+            row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would yield number 5 in the second column,
+            second row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would yield number 6 in the third column, first
+            row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Now, when trying to go up to the right, number 4 is encountered, so
+            we go down one from 6, and write number 7 in the third column,
+            second row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would go out of bounds, so we loop around, and
+            number 8 is at the first column, first row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8</td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>
+            Up and to the right would go out of bounds, so we loop around, and
+            number 9 is at the second column, third row.
+          </p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8</td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>9</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <p>The final result is the following.</p>
+          <center>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8</td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>9</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+          <hr />
+          <h2>Validating the Magic Square</h2>
+          <p>Rows</p>
+          <ul>
+            <li>Row 1: 8 + 1 + 6 = 15</li>
+            <li>Row 2: 3 + 5 + 7 = 15</li>
+            <li>Row 3: 4 + 9 + 2 = 15</li>
+          </ul>
+          <p>Columns</p>
+          <ul>
+            <li>Col 1: 8 + 3 + 4 = 15</li>
+            <li>Col 2: 1 + 5 + 9 = 15</li>
+            <li>Col 3: 6 + 7 + 2 = 15</li>
+          </ul>
+          <p>Diagonals</p>
+          <ul>
+            <li>Diagonal 1: 8 + 5 + 2 = 15</li>
+            <li>Diagonal 2: 6 + 5 + 4 = 15</li>
+          </ul>
+          <hr />
+          <center>
+            <p><strong>Quod Erat Demonstrandum</strong></p>
+          </center>
+
+          <section class="article-resource">
+            <div class="link">
+              <p>
+                <a
+                  class="maps"
+                  href="/assets/blog/magic_square_3x3.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click here to view the PDF
+                </a>
+              </p>
+            </div>
+          </section>
         </div>
-      </section>
-    
-
-  </div>
-</article>
-
+      </article>
     </main>
     <footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        Jan's Math Blog
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">Jan's Math Blog</div>
+
+          <p class="site-footer__meta">
+            © 2025 Jan's Math Blog. All rights reserved.
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <p class="site-footer__meta">
-        © 2025 Jan's Math Blog. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
-
-
-    
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
+        window.netlifyIdentity.on("init", (user) => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
@@ -96,17 +483,24 @@
       }
     </script>
 
-    
     <script>
       window.MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
       };
     </script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</body>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
 </html>
