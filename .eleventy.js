@@ -6,14 +6,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy("./src/js");
 
-  // Existing filter for blog post dates
+  // Filter for blog post dates
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
-  // NEW: simple filter that returns the current year as "yyyy"
+  // Filter that returns the current year as "yyyy"
   eleventyConfig.addFilter("year", () => {
     return DateTime.now().toFormat("yyyy");
+  });
+
+  // Global current year
+  eleventyConfig.addGlobalData("currentYear", () => {
+    return new Date().getFullYear();
   });
 
   return {
