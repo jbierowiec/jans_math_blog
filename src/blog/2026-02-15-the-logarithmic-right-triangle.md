@@ -5,7 +5,7 @@ description: >-
   logarithmic right triangle, as well as proving that these sides hold true with
   respect to the Pythagorean Theorem.
 author: Janek
-date: 2026-02-16T00:53:44.683Z
+date: 02/15/2026 10:00 AM
 tags:
   - ''
 image: /assets/blog/right_logarithmic_triangle.png
