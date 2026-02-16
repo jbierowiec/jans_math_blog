@@ -27,8 +27,12 @@ To prove that a logarithmic right triangle is valid, the pythagorean theorem is 
 For a 3− 4− 5 right triangle:
 
 \\[
-3^2 + 4^2 = 5^2\\
-9 + 16 = 25\\
+3^2 + 4^2 = 5^2
+\\]
+\\[
+9 + 16 = 25
+\\]
+\\[
 25 = 25
 \\]
 
@@ -53,6 +57,24 @@ Below is a correctly constructed 4×4 magic square using this new algorithm.
 \\[
 \ln(x)^2 + \ln(2x)^2 = \ln(3x)^2
 \\] 
+\\[
+2\ln(x) + 2\ln(2x) = 2\ln(3x)
+\\]
+\\[
+
+\\]
+\\[
+\\]
+\\[
+\\]
+\\[
+\\]
+\\[
+\\]
+\\[
+\\]
+\\[
+\\]
 
 </center>
 
