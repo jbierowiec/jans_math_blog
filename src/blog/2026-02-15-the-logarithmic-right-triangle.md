@@ -12,3 +12,4 @@ pdf: /assets/blog/logarithmic_right_triangle_proof.pdf
 status: published
 ---
 
+t
