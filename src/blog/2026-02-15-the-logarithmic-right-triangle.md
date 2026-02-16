@@ -50,8 +50,6 @@ IMAGE
 
 ## Proving the Logarithmic Right Triangle
 
-Below is a correctly constructed 4×4 magic square using this new algorithm.
-
 <center>
 
 \\[
@@ -84,13 +82,34 @@ x = \frac{3}{2}
 
 </center>
 
-Now we will validate whether the all the sides work when plugging in x =
+Now we will validate whether the all the sides work when plugging in $x = \frac{3}{2}$
 logarithms.
 
 <center>
 
 \\[
 \ln\left(\frac{3}{2}\right)^2 + \ln\left((2)\cdot\left(\frac{3}{2}\right)\right)^2 = \ln\left((3)\cdot\left(\frac{3}{2}\right)\right)^2
+\\]
+\\[
+2\ln\left(\frac{3}{2}\right) + 2\ln\left((2)\cdot\left(\frac{3}{2}\right)\right) = 2\ln\left((3)\cdot\left(\frac{3}{2}\right)\right)
+\\]
+\\[
+2\ln\left(\frac{3}{2}\right) + 2\ln(3) = 2\ln\left(\frac{9}{2}\right)
+\\]
+\\[
+2\ln(3) - 2\ln(2) + 2\ln(3) = 2\ln(9) - 2\ln(2)
+\\]
+\\[
+2\ln(3) + 2\ln(3) = 2\ln(9)
+\\]
+\\[
+4\ln(3) = 2\ln(9)
+\\]
+\\[
+\ln(3^4) = \ln(9^2)
+\\]
+\\[
+\ln(81) = \ln(81)
 \\]
 
 </center>
