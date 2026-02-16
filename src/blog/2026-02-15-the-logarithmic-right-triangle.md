@@ -70,13 +70,13 @@ Below is a correctly constructed 4×4 magic square using this new algorithm.
 2\ln(x) = 2\ln(3) - 2\ln(2)
 \\]
 \\[
-2\ln(x) = 2\ln(\frac{3}{2})
+2\ln(x) = 2\ln\left(\frac{3}{2}\right)
 \\]
 \\[
-\ln(x) = \ln(\frac{3}{2})
+\ln(x) = \ln\left(\frac{3}{2}\right)
 \\]
 \\[
-e^{\ln(x)} = e^{\ln(\frac{3}{2})}
+e^{\ln(x)} = e^{\ln\left(\frac{3}{2}\right)}
 \\]
 \\[
 x = \frac{3}{2}
@@ -89,7 +89,9 @@ logarithms.
 
 <center>
 
-
+\\[
+\ln\left(\frac{3}{2}\right)^2 + \ln\left((2)\cdot\left(\frac{3}{2}\right)\right)^2 = \ln\left((3)\cdot\left(\frac{3}{2}\right)\right)^2
+\\]
 
 </center>
 
