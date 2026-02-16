@@ -61,19 +61,25 @@ Below is a correctly constructed 4×4 magic square using this new algorithm.
 2\ln(x) + 2\ln(2x) = 2\ln(3x)
 \\]
 \\[
-
+2\ln(x) + 2\ln(2) + 2\ln(x) = 2\ln(3) + 2\ln(x)
 \\]
 \\[
+2\ln(2) + 2\ln(x) = 2\ln(3)
 \\]
 \\[
+2\ln(x) = 2\ln(3) - 2\ln(2)
 \\]
 \\[
+2\ln(x) = 2\ln(\frac{3}{2})
 \\]
 \\[
+\ln(x) = \ln(\frac{3}{2})
 \\]
 \\[
+e^{\ln(x)} = e^{\ln(\frac{3}{2})}
 \\]
 \\[
+x = \frac{3}{2}
 \\]
 
 </center>
