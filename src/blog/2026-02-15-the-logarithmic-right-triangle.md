@@ -44,7 +44,7 @@ The sides that are perpendicular to each other, when squared and added together,
 
 The logarithmic right triangle looks like the following, in the image provided below:
 
-IMAGE
+![Alt text](/assets/blog/right_logarithmic_triangle.png)
 
 ---
 
